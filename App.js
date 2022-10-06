@@ -5,7 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import AddProductScreen from './src/screens/AddProductScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import {Button} from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/AntDesign';
 import {withAuthenticator} from 'aws-amplify-react-native';
 import {Auth} from 'aws-amplify';
 
@@ -31,13 +31,13 @@ const App=() => {
                 <TouchableOpacity
                   style={styles.addButton}
                   onPress={() => navigation.navigate('AddProduct')}>
-                  <Icon name={'plus'} size={20} color="#000000" />
+                  <Icon name={'pluscircle'} size={20} color="#000000" />
                 </TouchableOpacity>
               ),
               headerLeft: () => (
                 <View style={styles.logOutBtn}>
                   <Button
-                    icon={<Icon name="sign-out" size={25} color="#000000" />}
+                    icon={<Icon name="logout" size={25} color="#000000" />}
                     onPress={SumbitSignOut}
                     type="clear"
                   />
